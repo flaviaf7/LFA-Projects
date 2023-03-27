@@ -27,17 +27,14 @@ f.close()
 
 cuvant = input('Cuvant de verificat: ').strip(' ')
 
-if cuvant == '':
-    print('acceptat - cuvant vid')
+drumuri = []
+calculeazaDrum(cuvant, 'q0', ('q0',), drumuri)
+if len(drumuri) == 0:
+    print('cuvant neacceptat')
 else:
-    drumuri = []
-    calculeazaDrum(cuvant, 'q0', ('q0',), drumuri)
-    if len(drumuri) == 0:
-        print('cuvant neacceptat')
-    else:
-        for i in range(len(drumuri)):
-            print(f'Drumul {i+1}:', end=' ')
-            for j in range(len(drumuri[i])-1):
-                print(f'{drumuri[i][j]} ->',end=' ')
-            print(drumuri[i][len(drumuri[i])-1])
+    for i in range(len(drumuri)):
+        print(f'Drumul {i+1}:', end=' ')
+        for j in range(len(drumuri[i])-1):
+            print(f'{drumuri[i][j]} ->',end=' ')
+        print(drumuri[i][len(drumuri[i])-1])
 
