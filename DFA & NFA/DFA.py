@@ -1,5 +1,5 @@
 
-f=open("DFA_Input.txt")
+f=open("DFA & NFA/DFA_Input.txt")
 
 tranzitii = [[x for x in linie.split()] for linie in f.read().split('\n')]
 

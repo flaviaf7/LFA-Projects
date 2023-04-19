@@ -9,7 +9,7 @@ def calculeazaDrum(cuvant, stare_curenta, drum, drumuri):
         for s in stari:
             calculeazaDrum(cuvant[1:], s, drum + (s,), drumuri)
 
-f = open('NFA_Input.txt')
+f = open('DFA & NFA/NFA_Input.txt')
 stari_finale = set(f.readline().strip().split()) # set cu starile finale
 tranzitii = {}   # dictionar de dictionare pentru fiecare stare
 s = f.readline()
@@ -29,6 +29,7 @@ cuvant = input('Cuvant de verificat: ').strip(' ')
 
 drumuri = []
 calculeazaDrum(cuvant, 'q0', ('q0',), drumuri)
+
 if len(drumuri) == 0:
     print('cuvant neacceptat')
 else:

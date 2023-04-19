@@ -1,10 +1,10 @@
-q1 q3 q4
+q3
 q0 a q1
-q0 b q1
-q0 a q2
 q1 b q2
-q1 b q3
-q2 a q4
-q2 b q4
-q3 a q4
-q3 b q4
+q1 b q4
+q1 b q5
+q2 a q3
+q4 a q3
+q4 c q4
+q5 b q5
+q5 c q3
