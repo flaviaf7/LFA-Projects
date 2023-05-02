@@ -25,7 +25,46 @@ The purpose of this repository is to showcase the skills and knowledge acquired 
       * If the input string is accepted by the NFA, the script prints all possible paths (i.e., sequences of states) that lead to an accepting state.
         Otherwise, it prints a message indicating that the input string is not accepted by the NFA.
       * The NFA implementation in the script uses recursion to traverse the state space and check all possible paths through the automaton.
-      
+
+* Lambda Non-Deterministic Finite Automata to Deterministic Finite Automata
+    * This project is a tool for converting a Lambda Non-Deterministic Finite Automata (Lambda-NFA) with lambda transitions to a Deterministic Finite Automata (DFA).
+    * This project defines two classes, NFA and DFA. The NFA class includes methods for calculating lambda closures and representing the automaton, while the DFA class converts an NFA to a DFA and also provides a string representation of the DFA. An example NFA is included in the code, and the program reads in input for creating an NFA from a file (input.txt).
+    
+    * An example of an input file:
+      ```
+      q0 q1 q2 q3 q4 q5 q6
+      a b
+      q0
+      q2 q6
+      q0 a q0
+      q0 a q1
+      q0 b q2
+      q0 lambda q2
+      q0 lambda q3
+      q1 lambda q2
+      q2 a q3
+      q2 lambda q4
+      q3 a q6
+      q3 b q6
+      q3 lambda q5
+      q3 b q3
+      q4 a q6
+      q4 b q5
+      q4 lambda q6
+      q5 a q6
+      q5 b q2
+      q5 lambda q6
+      q5 lambda q2
+      q6 b q6
+      ```
+      Explanation of each line:
+
+      - The 1st line lists all the states of the finite automata, separated by spaces.
+      - The 2nd line lists all the input symbols that the finite automata can read, separated by spaces.
+      - The 3rd line indicates the initial state of the finite automata.
+      - The 4th line lists the final (or accepting) states of the finite automata, separated by spaces.
+      - The rest of the lines represents the transitions of the finite automata.
+    
 Each project has its own directory in the repository, with code implementation.
 
 # Contributors :raised_hand_with_fingers_splayed: 	
